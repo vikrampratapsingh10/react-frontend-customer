@@ -17,5 +17,9 @@ export default {
    UPDATE_PRODUCT: "/product/updated",
    VIEW_ALL_PRODUCT_ON_SCROLL: "/product/limitLoadproduct",
    CUSTOMER_SIGNIN: "/customer/customerSignin",
-   VIEW_PRODUCT_BY_ID: "/product/"
+   VIEW_PRODUCT_BY_ID: "/product/",
+   FETCH_CATEGORY: "/category/category-list",
+   FETCH_FEATUREPRODUCT: "/product/featuresproduct",
+   ADD_WISHLIST: "/wishlist/addtowishlist",
+   VIEW_WISHLIST: "/wishlist/viewwishlist"
 }

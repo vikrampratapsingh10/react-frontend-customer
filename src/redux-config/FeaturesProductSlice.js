@@ -1,8 +1,9 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+import api from "../WebApi/api";
 
 export const fetchFeatureProduct=createAsyncThunk("featuresproduct/fetchFeatureProduct",async()=>{
-    let response=await axios.get("http://localhost:3000/product/featuresproduct")
+    let response=await axios.get(api.FETCH_FEATUREPRODUCT)
        if(response.data.status)
     return response.data.products
 })

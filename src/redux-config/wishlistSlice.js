@@ -1,17 +1,18 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 import { toast } from "react-toastify";
+import api from "../WebApi/api";
 
 
 export const fetchWishlist = createAsyncThunk("fetchwishlist", async (obj) => {
-    let response = await axios.post("http://localhost:3000/wishlist/viewwishlist", { customerId: obj.customerId })
+    let response = await axios.post(api.VIEW_WISHLIST, { customerId: obj.customerId })
     return response.data.wishlist
 })
 
 
 
 export const addItemInWishlist = createAsyncThunk("addtowishlist", async (obj) => {
-    let response = await axios.post("http://localhost:3000/wishlist/addtowishlist", { customerId: obj.customerId, productId: obj.productId })
+    let response = await axios.post(api.ADD_WISHLIST, { customerId: obj.customerId, productId: obj.productId })
     if (response.data.status)
 
         return response.data
